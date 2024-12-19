@@ -1,0 +1,1 @@
+// This file defines custom types or enums related to the module. It ensures strong typing and reusability across the application.
