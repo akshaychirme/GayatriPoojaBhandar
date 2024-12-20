@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPB - Register</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="nav_container">
+      <div class="logo">
+        <a href="homepage.html"><img src="logo.png" /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="crystal.html">Crystal</a></li>
+          <li><a href="pyramid.html">Pyramid</a></li>
+          <li><a href="yantras.html">Yantras</a></li>
+          <li><a href="gemstone.html">Gemstone</a></li>
+        </ul>
+      </div>
+      <div class="nav-icons"></div>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="formContent">
+      <div class="login-form-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <input
+            type="text"
+            id="userName"
+            placeholder="Enter your name"
+            required
+            autofocus
+          />
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <input
+            type="password"
+            id="userPassword"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="submit">Register</button>
+        </form>
+
+        <div class="register-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

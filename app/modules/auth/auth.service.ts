@@ -6,7 +6,6 @@ import { IExcludedPaths } from "./auth.types";
 export const createToken = (payload: any) => {
     const { JWT_SECRET } = process.env;
     const token = sign(payload, JWT_SECRET || '');
-
     return token;
 }
 
@@ -25,7 +24,7 @@ export const authorize = (excludedPaths: IExcludedPaths[]) => {
         try {
             if(
                 excludedPaths.find(
-                    e => e.path === req.url && e.method === req.method
+                    exp => exp.path === req.url && exp.method === req.method
                 )
             ) {
                 return next();
@@ -43,7 +42,6 @@ export const authorize = (excludedPaths: IExcludedPaths[]) => {
         }
     }
 }
-
 
 //we check token wether the role is authorize or not. to accsess that api. 
 export const permit = (permittedRoles: string[]) => {

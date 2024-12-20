@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>GPB - Login</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -16,7 +16,7 @@
   <body>
     <div class="nav_container">
       <div class="logo">
-        <img src="logo.png" />
+        <a href="homepage.html"><img src="logo.png" /></a>
       </div>
       <div class="menu">
         <ul>
@@ -26,26 +26,34 @@
           <li><a href="gemstone.html">Gemstone</a></li>
         </ul>
       </div>
-
-      <div class="nav-icons">
-        <a href="login.html"><i class="fa-solid fa-user"></i></a>
-        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
+      <div class="nav-icons"></div>
     </div>
-    <section>
-      <div class="main_container">
-        <div class="content">
-          <h2>Welcome To My First Code in CodePen</h2>
-          <p>
-            That's fantastic! Starting to program is like opening a door to a
-            whole new world of creativity and problem-solving.<br />
-            CodePen is a great platform for experimenting with code, sharing
-            your projects, and learning from others. What are you working on
-            right now?
-          </p>
-          <button id="btn-allProducts">All Products</button>
+
+    <!-- Login Form -->
+    <div class="formContent">
+      <div class="login-form-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter your email"
+            required
+            autofocus
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+
+        <div class="register-link">
+          New user? <a href="register.html">Register here</a>
         </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>

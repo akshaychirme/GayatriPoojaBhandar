@@ -7,7 +7,7 @@ export const startServer = async () => {
     registerRoutes(app);
 
     const { PORT } = process.env;
-    app.listen(PORT, () => console.log(`Server started on Port: ${PORT}`));
+    app.listen(PORT, () => console.log(`Server started on Port: http://localhost:${PORT}`));
   } catch (e) {
     console.log(e);
     console.log("Could not start the server");

@@ -4,6 +4,8 @@ import cors from "cors";
 import { routes, excludedPaths } from "./routes.data";
 import { ResponseHandler } from "../../utility/response-handler";
 import { authorize } from "../auth/auth.service";
+import path from "path";
+import express from "express";
 
 export const registerRoutes = (app: Application) => {
   app.use(helmet());
@@ -14,8 +16,13 @@ export const registerRoutes = (app: Application) => {
 //     console.log("MIDDLEWARE CALLED");
 //   })
 
-  //every api will passed throuth this middleware and check authorization
+  //every api will passed throutgh this middleware and check authorization
   app.use(authorize(excludedPaths));
+
+  app.use(express.static(path.join(__dirname, "public")));
+  console.log(__dirname);
+  console.log(__dirname);
+
 
   for(let route of routes){
 	app.use(route.path, route.router);
